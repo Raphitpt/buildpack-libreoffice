@@ -73,7 +73,7 @@ install_apt_deps "$BUILD_DIR" "$CACHE_DIR" "$ENV_DIR"
 if [ -f $BUILD_DIR/LibreOfficeAppImage ] ; then
     DOWNLOAD=$(grep http $BUILD_DIR/LibreOfficeAppImage | head -n 1)
 else
-    DOWNLOAD="https://appimages.libreitalia.org/LibreOffice-fresh.standard-x86_64.AppImage"
+    DOWNLOAD="https://appimages.libreitalia.org/LibreOffice-7.3.1.3.full-x86_64.AppImage"
 fi
 VERSION=$(echo $DOWNLOAD | grep -Poi "(?<=LibreOffice-)[^/]+(?=\.AppImage)")
 VERSION=${VERSION:-default} # avoid empty version if the grep fails to match
